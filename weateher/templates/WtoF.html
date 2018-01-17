@@ -24,16 +24,20 @@
     <div class="navbar navbar-full navbar-static-top navbar-dark bg-inverse">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation"></button>
-        <a href="http://218.39.131.181:5000/" class="navbar-brand">TrendFormer</a>
+        <a href="http://121.147.106.12:5000/" class="navbar-brand">TrendFormer</a>
       </div>
     </div>
 
     <section class="jumbotron text-xs-center">
       <div class="container" id = "filters">
         <div  align="left">
-          <p> 검색 조건을 선택해주세요. (2가지 이하) </p>
-          <form action = "http://218.39.131.181:5000/result" method = "POST">
-            <input type="checkbox" class="fancy-check-btn" name="weekend" value="6"><label for="checkbox_6">주말</label>
+          <p> 검색 조건을 선택해주세요. (날씨) </p>
+          <form action = "http://121.147.106.12:5000/result" method = "POST">
+            <input type="checkbox" class="fancy-check-btn" name="spring" value="6"><label for="checkbox_6">봄</label>
+            <input type="checkbox" class="fancy-check-btn" name="summer" value="6"><label for="checkbox_6">여름</label>
+            <input type="checkbox" class="fancy-check-btn" name="autumn" value="6"><label for="checkbox_6">가을</label>
+            <input type="checkbox" class="fancy-check-btn" name="winter" value="6"><label for="checkbox_6">겨울</label></br>
+            <input type="checkbox" class="fancy-check-btn" name="weekend" value="7"><label for="checkbox_7">주말</label>
             <input type="checkbox" class="fancy-check-btn" name="friday" value="7"><label for="checkbox_7">불금</label></br>
             <input type="checkbox" class="fancy-check-btn" name="temperture_high" value="3"><label for="checkbox_3">더운날씨</label>
             <input type="checkbox" class="fancy-check-btn" name="temperture_low" value="4"><label for="checkbox_4">추운날씨</label></br>
@@ -43,6 +47,22 @@
             <input type="checkbox" class="fancy-check-btn" name="halo" value="5"><label for="checkbox_5">햇무리</label>
             <input type="checkbox" class="fancy-check-btn" name="fog" value="8"><label for="checkbox_8">흐림</label>
             <input type="checkbox" class="fancy-check-btn" name="yellow_dust" value="0"><label for="checkbox_10">황사</label>
+            <input type="checkbox" class="fancy-check-btn" name="yellow_dust" value="0"><label for="checkbox_10">장마</label>
+        
+
+       <p> 검색 조건을 선택해주세요. (상황) </p>
+            <input type="checkbox" class="fancy-check-btn" name="spring" value="6"><label for="checkbox_6">혼자</label>
+            <input type="checkbox" class="fancy-check-btn" name="spring" value="6"><label for="checkbox_6">가족끼리</label>
+            <input type="checkbox" class="fancy-check-btn" name="spring" value="6"><label for="checkbox_6">친구들과</label>
+            <input type="checkbox" class="fancy-check-btn" name="spring" value="6"><label for="checkbox_6">애인과 먹을때</label></br>
+            <input type="checkbox" class="fancy-check-btn" name="spring" value="6"><label for="checkbox_6">슬플때</label>
+            <input type="checkbox" class="fancy-check-btn" name="spring" value="6"><label for="checkbox_6">즐거울때</label>
+            <input type="checkbox" class="fancy-check-btn" name="spring" value="6"><label for="checkbox_6">외로울때</label>
+            <input type="checkbox" class="fancy-check-btn" name="spring" value="6"><label for="checkbox_6">화날때</label></br>
+            <input type="checkbox" class="fancy-check-btn" name="spring" value="6"><label for="checkbox_6">배가 많이 고플때</label>
+            <input type="checkbox" class="fancy-check-btn" name="spring" value="6"><label for="checkbox_6">배가 조금 고플때</label>
+
+
             <p><input type = "submit" value = "search" /></p>
           </form>
         </div>
@@ -64,7 +84,7 @@
 
 {%if res[0]%}
           <div class="card">
-              <a href="http://218.39.131.181:5000/chart/{{res[0]['food']}}">
+              <a href="http://121.147.106.12/chart/{{res[0]['food']}}">
 	<img src='http://softwarechoco.cafe24.com/getImage.jsp?q={{res[0]["food"]}}'>
            <p class="card-text">
               <a>{{ "food : " + res[0]['food']}}</a><br>
@@ -74,7 +94,7 @@
 {% endif %}
 {%if res[1]%}
           <div class="card">
-              <a href="http://218.39.131.181:5000/chart/{{res[1]['food']}}">
+              <a href="http://121.147.106.12:5000/chart/{{res[1]['food']}}">
 
             <img src='http://softwarechoco.cafe24.com/getImage.jsp?q={{res[1]["food"]}}'>
             <p class="card-text">
@@ -85,7 +105,7 @@
 {% endif %}
 {%if res[2]%}
           <div class="card">
-              <a href="http://218.39.131.181:5000/chart/{{res[2]['food']}}">
+              <a href="http://121.147.106.12:5000/chart/{{res[2]['food']}}">
             <img src='http://softwarechoco.cafe24.com/getImage.jsp?q={{res[2]["food"]}}'>
             <p class="card-text">
               <a>{{ "food : " + res[2]['food']}}</a><br>
@@ -95,7 +115,7 @@
 {% endif %}
 {%if res[3]%}
           <div class="card">
-            <a href="http://218.39.131.181:5000/chart/{{res[3]['food']}}">
+            <a href="http://121.147.106.12:5000/chart/{{res[3]['food']}}">
 
             <img src='http://softwarechoco.cafe24.com/getImage.jsp?q={{res[3]["food"]}}'>
             <p class="card-text">
@@ -106,7 +126,7 @@
 {% endif %}
 {%if res[4]%}
           <div class="card">
-              <a href="http://218.39.131.181:5000/chart/{{res[4]['food']}}">
+              <a href="http://121.147.106.12:5000/chart/{{res[4]['food']}}">
 
             <img src='http://softwarechoco.cafe24.com/getImage.jsp?q={{res[4]["food"]}}'>
             <p class="card-text">
@@ -117,7 +137,7 @@
 {% endif %}
 {%if res[5]%}
           <div class="card">
-              <a href="http://218.39.131.181:5000/chart/{{res[5]['food']}}">
+              <a href="http://121.147.106.12:5000/chart/{{res[5]['food']}}">
 
             <img src='http://softwarechoco.cafe24.com/getImage.jsp?q={{res[5]["food"]}}'>
             <p class="card-text">
@@ -128,7 +148,7 @@
 {% endif %}
 {%if res[6]%}
           <div class="card">
-              <a href="http://218.39.131.181:5000/chart/{{res[6]['food']}}">
+              <a href="http://121.147.106.12:5000/chart/{{res[6]['food']}}">
 
             <img src='http://softwarechoco.cafe24.com/getImage.jsp?q={{res[6]["food"]}}'>
             <p class="card-text">
@@ -139,7 +159,7 @@
 {% endif %}
 {%if res[7]%}
           <div class="card">
-              <a href="http://218.39.131.181:5000/chart/{{res[7]['food']}}">
+              <a href="http://121.147.106.12:5000/chart/{{res[7]['food']}}">
 
             <img src='http://softwarechoco.cafe24.com/getImage.jsp?q={{res[7]["food"]}}'>
             <p class="card-text">
@@ -150,7 +170,7 @@
 {% endif %}
 {%if res[8]%}
           <div class="card">
-              <a href="http://218.39.131.181:5000/chart/{{res[8]['food']}}">
+              <a href="http://121.147.106.12:5000/chart/{{res[8]['food']}}">
 
             <img src='http://softwarechoco.cafe24.com/getImage.jsp?q={{res[8]["food"]}}'>
             <p class="card-text">

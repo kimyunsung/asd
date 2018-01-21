@@ -178,6 +178,51 @@
               <a>score : {{ res[8]['F']}}</a><br>
             </p></a>
           </div>
+{%if res[9]%}
+          <div class="card">
+              <a href="http://121.147.106.12:5000/chart/{{res[9]['food']}}">
+
+            <img src='http://softwarechoco.cafe24.com/getImage.jsp?q={{res[9]["food"]}}'>
+            <p class="card-text">
+              <a>{{ "food : " + res[9]['food']}}</a><br>
+              <a>score : {{ res[9]['F']}}</a><br>
+            </p></a>
+          </div>
+{% endif %}
+{%if res[10]%}
+          <div class="card">
+              <a href="http://121.147.106.12:5000/chart/{{res[10]['food']}}">
+
+            <img src='http://softwarechoco.cafe24.com/getImage.jsp?q={{res[10]["food"]}}'>
+            <p class="card-text">
+              <a>{{ "food : " + res[10]['food']}}</a><br>
+              <a>score : {{ res[10]['F']}}</a><br>
+            </p></a>
+          </div>
+{% endif %}
+{%if res[11]%}
+          <div class="card">
+              <a href="http://121.147.106.12:5000/chart/{{res[11]['food']}}">
+
+            <img src='http://softwarechoco.cafe24.com/getImage.jsp?q={{res[11]["food"]}}'>
+            <p class="card-text">
+              <a>{{ "food : " + res[11]['food']}}</a><br>
+              <a>score : {{ res[11]['F']}}</a><br>
+            </p></a>
+          </div>
+{% endif %}
+{%if res[12]%}
+          <div class="card">
+              <a href="http://121.147.106.12:5000/chart/{{res[12]['food']}}">
+
+            <img src='http://softwarechoco.cafe24.com/getImage.jsp?q={{res[12]["food"]}}'>
+            <p class="card-text">
+              <a>{{ "food : " + res[12]['food']}}</a><br>
+              <a>score : {{ res[12]['F']}}</a><br>
+            </p></a>
+          </div>
+{% endif %}
+
 {% endif %}
         </div>
       </div>
